@@ -7,16 +7,10 @@ import {
   NavbarToggler,
   Collapse,
   NavItem,
-  Jumbotron,
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  Form,
-  FormGroup,
-  Input,
-  Label
+  Button
 } from "reactstrap";
+import * as Ai from 'react-icons/ai';
+import * as Md from 'react-icons/md';
 import { NavLink ,Link} from "react-router-dom";
 
 class Header extends Component {
@@ -58,22 +52,22 @@ class Header extends Component {
               <Nav navbar>
                 <NavItem>
                   <NavLink className="nav-link" to="/home">
-                    <span className="fa fa-home fa-lg" /> Home
+                  <i><Ai.AiOutlineHome size={25} /></i> Home
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink className="nav-link" to="/clubs">
-                    <span className="fa fa-info fa-lg" /> Clubs
+                  <i><Md.MdLocalActivity size={25} /></i> Clubs
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink className="nav-link" to="/feeds">
-                    <span className="fa fa-list fa-lg" /> Feeds
+                  <i><Md.MdRssFeed size={25} /></i> Feeds
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink className="nav-link" to="/contactus">
-                    <span className="fa fa-address-card fa-lg" /> Contact Us
+                  <i><Md.MdFeedback size={25} /></i> Contact Us
                   </NavLink>
                 </NavItem>
               </Nav>
