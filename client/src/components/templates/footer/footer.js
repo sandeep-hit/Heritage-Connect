@@ -11,7 +11,7 @@ function Footer(props) {
                 <div className="col-4  col-sm-2">
                     <h5>Links</h5>
                     <ul className="list-unstyled">
-                        <li><Link  style={{textDecoration:'none',color:"white"}} to='/home'>Home</Link></li>
+                        <li><Link  style={{textDecoration:'none',color:"white"}} size={10} to='/home'>Home</Link></li>
                         <li><Link style={{textDecoration:'none',color:"white"}} to='/posts'>Posts</Link></li>
                         <li><Link style={{textDecoration:'none',color:"white"}} to='/notice'>Notice</Link></li>
                         <li><Link style={{textDecoration:'none',color:"white"}} to='/opportunities'>Opportunities</Link></li>

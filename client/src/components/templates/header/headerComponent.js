@@ -1,70 +1,99 @@
-import React, { useState } from 'react';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import { Link } from 'react-router-dom';
-import { SidebarData } from './SidebarData';
+import React, { Component } from "react";
 import './header.css';
-import { IconContext } from 'react-icons';
+import {
+  Navbar,
+  NavbarBrand,
+  Nav,
+  NavbarToggler,
+  Collapse,
+  NavItem,
+  Jumbotron,
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  Form,
+  FormGroup,
+  Input,
+  Label
+} from "reactstrap";
+import { NavLink ,Link} from "react-router-dom";
 
-function Header() {
-  const [sidebar, setSidebar] = useState(false);
+class Header extends Component {
+  constructor(props) {
+    super(props);
 
-  const showSidebar = () => setSidebar(!sidebar);
+    this.state = {
+      isNavOpen: false
+    };
+    this.toggleNav = this.toggleNav.bind(this);
 
-  return (
-    <div>
-      <IconContext.Provider value={{ color: '#fff' }}>
-        <div className="navbar">
-        
-          <Link to='#' className='menu-bars'>
-            <div className="sidebar-icon">
-            <FaIcons.FaBars onClick={showSidebar} />
-            </div>
-          </Link>
-          <a className="navbar-brand" href="/">
-            <div className="logo-image">
-             <img
-                alt="logo"
-                src="/images/logo/heritage-connect-logo.png"
-                width="180"
-                height="100"
-               className="img-fluid"
-                                  
-            />
-            </div>
-          </a>
-           
-            
-            
-              
+  }
 
-              
-                    
-                    
-        </div>
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-          <ul className='nav-menu-items' onClick={showSidebar}>
-            <li className='navbar-toggle'>
-              <Link to='#' className='menu-bars'>
-                <AiIcons.AiOutlineClose />
-              </Link>
-            </li>
-            {SidebarData.map((item, index) => {
-              return (
-                <li key={index} className={item.cName}>
-                  <Link to={item.path}>
-                    {item.icon}
-                    <span>{item.title}</span>
+  toggleNav() {
+    this.setState({
+      isNavOpen: !this.state.isNavOpen
+    });
+  }
+
+  
+
+
+
+  render() {
+    return (
+      <div>
+        <Navbar dark expand="md" className="navbar ">
+          <div className="container">
+            <NavbarToggler onClick={this.toggleNav} />
+            <NavbarBrand className="mr-auto" href="/">
+              <img
+                src={process.env.PUBLIC_URL+"/images/logo/heritage-connect-logo.png"}
+                height="150"
+                width="160"
+                alt="Heritage Connect"
+              />
+            </NavbarBrand>
+            <Collapse isOpen={this.state.isNavOpen} navbar>
+              <Nav navbar>
+                <NavItem>
+                  <NavLink className="nav-link" to="/home">
+                    <span className="fa fa-home fa-lg" /> Home
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="nav-link" to="/clubs">
+                    <span className="fa fa-info fa-lg" /> Clubs
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="nav-link" to="/feeds">
+                    <span className="fa fa-list fa-lg" /> Feeds
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="nav-link" to="/contactus">
+                    <span className="fa fa-address-card fa-lg" /> Contact Us
+                  </NavLink>
+                </NavItem>
+              </Nav>
+              <Nav className="ml-auto" navbar>
+                <NavItem>
+                <Link to="/auth/login">
+                  <Button outline hre>
+                    <span className="fa fa-sign-in fa-lg" /> Login
+                  </Button>
                   </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </IconContext.Provider>
-      
-    </div>
-  );
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </div>
+        </Navbar>
+        
+        
+      </div>
+    );
+  }
 }
 
 export default Header;
