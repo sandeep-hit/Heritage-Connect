@@ -6,6 +6,8 @@ import Feed  from '../components/feeds/feeds';
 import Login from '../components/auth/login/loginComponent';
 import Signup from '../components/auth/register/signupComponent';
 import Contact from '../components/contactus/contactcomponent';
+import Createfeed from '../components/feeds/createpost/createpost';
+import Home from '../components/home/home'
 import './main.css';
 
 const Main=()=> {
@@ -16,8 +18,10 @@ const Main=()=> {
           <Header/>
               <div className="Content">
               <Switch>
-
+              <Route exact path="/" component={Home} />
+              <Route exact path="/home" component={Home} />
               <Route path="/feeds" component={Feed} />
+              <Route exact path='/createpost' component={Createfeed} />
               <Route exact path='/auth/login' component={Login} />
               <Route exact path="/auth/signup" component={Signup} />
               <Route exact path="/contactus" component={Contact} />
