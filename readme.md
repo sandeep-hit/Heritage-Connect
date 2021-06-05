@@ -10,7 +10,7 @@ This project aims to build the official site for the community page so that any 
 
 ## Tech Stack 🗃
 
- <img src="https://img.shields.io/badge/-MongoDB-yellow?style=flat&logo=mongoDB"> <img src="https://img.shields.io/badge/-ExpressJS-grey?style=flat&logo=express&logoColor=white"> <img src="https://img.shields.io/badge/ReactJS%20-%2320232a.svg?logo=react" >   <img src="https://img.shields.io/badge/-NodeJS%20-%2320232a?style=flat&logo=node.js"> 
+ <img src="https://img.shields.io/badge/-MongoDB-yellow?style=flat&logo=mongoDB"> <img src="https://img.shields.io/badge/-Java-grey?style=flat&logo=Java&logoColor=blue"> <img src="https://img.shields.io/badge/ReactJS%20-%2320232a.svg?logo=react" >   <img src="https://img.shields.io/badge/-Spring Boot%20-%2320232a?style=flat&logo=spring"> 
 
 
 ##  Getting Started 👨‍💻
