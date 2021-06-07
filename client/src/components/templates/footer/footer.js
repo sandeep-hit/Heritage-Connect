@@ -3,7 +3,7 @@ import {  Link} from 'react-router-dom';
 import {AiFillPhone,AiFillTwitterCircle,AiFillFacebook,AiFillYoutube,AiFillInstagram} from 'react-icons/ai';
 import {AiOutlineMail} from 'react-icons/ai';
 import './footer.css';
-function Footer(props) {
+function Footer() {
     return(
     <div className="footer">
         <div className="container" style={{textDecoration:'none',color:"white"}}>

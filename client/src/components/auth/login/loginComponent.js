@@ -8,9 +8,9 @@ import {
 } from 'reactstrap';
 function Login () {
   return (
-    <div className="row border m-3 p-5 shadow">
-    <div className="col-md-4 border m-3 p-3 ">
-     <img  src={process.env.PUBLIC_URL+"/images/auth/login/loginimage.svg"} alt="Login" height="auto" width="100%"/>
+    <div className="row border m-3 p-5 shadow" style={{backgroundColor:'#FFF6F6'}}>
+    <div className="col-md-4 border m-3 p-3" style={{backgroundColor:'white'}}>
+     <img  src={process.env.PUBLIC_URL+"/images/auth/login/loginimage.svg"} alt="Login" height="auto" width="100%" padding="20px" />
      <p size="20" id="imgtxt"><i>Collaborate and Grow!</i></p>
      </div>
     <Container className="col-md-7 ">

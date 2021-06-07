@@ -7,7 +7,7 @@ import {
 function Signup()
 {
   return (
-    <div className="container border col-7 ml-auto mr-auto mt-5 mb-5 p-5 shadow">
+    <div className="container border col-7 ml-auto mr-auto mt-5 mb-5 p-5 shadow" style={{backgroundColor:"#FFF6F6"}}>
       <h1  font="italic" className="ml-0">Signup</h1>
       <hr/>
     <Form method="POST">

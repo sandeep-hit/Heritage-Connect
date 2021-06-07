@@ -1,4 +1,3 @@
-import react from 'react';
 import Feedpost from '../feedpost/feedpost';
 import {Grid, CircularProgress} from '@material-ui/core';
 import {useSelector} from 'react-redux';
@@ -11,7 +10,7 @@ const Feedposts=()=>{
       !posts.length?<CircularProgress/> : (
           <Grid className={classes.container} container alignItems="Stretch" spacing={3}>
             {posts.map((post)=>(
-              <Grid key={post._id} item xs={12} sm={6}>
+              <Grid key={post._id} item xs={12} sm={12}>
                 <Feedpost post={post}/>
               </Grid>
             ))
